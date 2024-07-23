@@ -1,2 +1,1 @@
-# golang-mongodb
-Go-MongoDB API
+# Go-MongoDB API
