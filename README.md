@@ -26,13 +26,12 @@ type Projects struct {
 
 ### Installation:
 - Clone this repository.
-- Install dependencies using go mod download.
+- Install dependencies using `go mod download`.
 - Add file `.env` with these variables
 ```golang
 PORT=8080
 MONGODB_URI="..."
 ```
-- Start your MongoDB server.
 
 ### Running the Application:
 - Compile and run the application: `go run main.go`
