@@ -13,6 +13,7 @@ import (
 func main() {
 	port := config.Getenv("PORT")
 	color.Cyan("🌏 Server running on localhost:" + port)
+	config.InitDB()
 
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 	c := cors.New(cors.Options{

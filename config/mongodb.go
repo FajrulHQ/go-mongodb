@@ -11,7 +11,13 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func MongoDBConnection() (*mongo.Database, error) {
+var DB *mongo.Database
+
+func InitDB() {
+	DB = MongoDBConnection("dashboard-go")
+}
+
+func MongoDBConnection(db_name string) *mongo.Database {
 	godotenv.Load()
 
 	// Set client options
@@ -34,5 +40,5 @@ func MongoDBConnection() (*mongo.Database, error) {
 
 	color.Green("⛁ Connected to Database")
 
-	return client.Database("portfolio"), nil
+	return client.Database(db_name)
 }
